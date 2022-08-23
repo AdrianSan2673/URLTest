@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     var dataList = [Result]()
     
     override func viewDidLoad() {
-     /*   super.viewDidLoad()
-        self.tableView.dataSource = self
+        super.viewDidLoad()
+     /*   self.tableView.dataSource = self
         self.tableView.delegate = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
        

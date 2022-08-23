@@ -82,7 +82,7 @@ extension ProfileViewController: UICollectionViewDataSource{
 extension ProfileViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var detailMovie = storyboard?.instantiateViewController(withIdentifier: "DetailMovieVC") as! DetailViewController
-        detailMovie.detailMovie = viewModel.dataList[indexPath.row]
+        //detailMovie.detailMovie = viewModel.dataList[indexPath.row]
         detailMovie.imgPath = "\(viewModel.dataList[indexPath.row].posterPath)"
         self.navigationController?.pushViewController(detailMovie, animated: true)
     }

@@ -8,9 +8,10 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-class AuthenticationViewController: UIViewController {
-
-    var authenticationViewModel = AuthenticationViewModel()
+import AuthenticationServices
+class AuthenticationViewController: UIViewController,ASWebAuthenticationPresentationContextProviding {
+    
+    
     
     @IBOutlet weak var IndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var writePassword: UITextField!
@@ -18,6 +19,10 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var logoImg: UIImageView!
     @IBOutlet weak var errorMessenge: UILabel!
     
+    let apiKey = "6211d940adfd49ac181b6546b14ff89d"
+    let getTokenMethod = "authentication/token/new"
+    let baseURLSecureString = "https://api.themoviedb.org/3/"
+    var requestToken: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +30,11 @@ class AuthenticationViewController: UIViewController {
         logoImg.image = UIImage(named: "theMovie")
         errorMessenge.isHidden = true
         IndicatorView.isHidden = true
+        
+        //setupBinders()
         // Do any additional setup after loading the view.
     }
+  
     func setGradientBackground() {
         let colorTop2 =  UIColor(red: 13.0/255.0, green: 37.0/255.0, blue: 63.0/255.0, alpha: 5.0).cgColor
         let colorTop =  UIColor(red: 1.0/255.0, green: 180.0/255.0, blue: 228.0/255.0, alpha: 5.0).cgColor
@@ -39,12 +47,17 @@ class AuthenticationViewController: UIViewController {
                 
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
+   
+    
     @IBAction func logInAction(_ sender: Any) {
-      if let email = writeUsername.text, let password = writePassword.text{
-            IndicatorView.isHidden = false
-            IndicatorView.startAnimating()
+      guard let email = writeUsername.text, let password = writePassword.text else {
+          print("write a email and password")
+          return
           
-           Auth.auth().signIn(withEmail: email, password: password){
+      }
+       
+        
+          Auth.auth().signIn(withEmail: email, password: password){
                 (resultado, error) in
                 if let resultado = resultado, error == nil{
                     self.IndicatorView.stopAnimating()
@@ -56,9 +69,12 @@ class AuthenticationViewController: UIViewController {
                     self.errorMessenge.isHidden = false
                 }
             }
-        }
+        
+        IndicatorView.isHidden = false
+        IndicatorView.startAnimating()
+       
     }
-    
+   
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -68,6 +84,9 @@ class AuthenticationViewController: UIViewController {
         MenuSegue.email = email
     }
     
-    
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        
+        return view.window!
+    }
 
 }

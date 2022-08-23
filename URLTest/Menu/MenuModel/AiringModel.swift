@@ -1,7 +1,7 @@
 import Foundation
-struct TVShow: Codable {
+struct Airing: Codable {
     let page: Int
-    let results: [ResultTv]
+    let results: [ResultAiring]
     let totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {
@@ -11,7 +11,7 @@ struct TVShow: Codable {
     }
 }
 
-struct ResultTv: Codable {
+struct ResultAiring: Codable {
     let backdropPath: String?
     let firstAirDate: String
     let genreIDS: [Int]

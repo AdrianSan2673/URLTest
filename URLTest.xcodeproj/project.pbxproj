@@ -23,6 +23,10 @@
 		D343A55A28AD35E800CDC5E3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343A55928AD35E800CDC5E3 /* Movie.swift */; };
 		D356176428B0716E003D2725 /* TvShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356176328B0716E003D2725 /* TvShows.swift */; };
 		D356176628B072AA003D2725 /* TvShowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356176528B072AA003D2725 /* TvShowVM.swift */; };
+		D3573E8128B4582700B264E5 /* TopMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3573E8028B4582700B264E5 /* TopMovie.swift */; };
+		D3573E8328B458EC00B264E5 /* TopMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3573E8228B458EC00B264E5 /* TopMovieModel.swift */; };
+		D3573E8528B4614B00B264E5 /* AiringModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3573E8428B4614B00B264E5 /* AiringModel.swift */; };
+		D3573E8728B462D600B264E5 /* AiringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3573E8628B462D600B264E5 /* AiringViewModel.swift */; };
 		D35944AA28B01B9600845743 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35944A928B01B9600845743 /* ProfileViewController.swift */; };
 		D35B4CA628AEBC0200FFE40F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B4CA528AEBC0200FFE40F /* AuthenticationViewController.swift */; };
 		D35B4CA828AEBD0E00FFE40F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D35B4CA728AEBD0E00FFE40F /* GoogleService-Info.plist */; };
@@ -31,7 +35,6 @@
 		D35B4CAF28AEBE3500FFE40F /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D35B4CAE28AEBE3500FFE40F /* FirebaseDatabaseSwift */; };
 		D35B4CB128AEBE3500FFE40F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D35B4CB028AEBE3500FFE40F /* FirebaseFirestore */; };
 		D35B4CB328AEBE3500FFE40F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D35B4CB228AEBE3500FFE40F /* FirebaseStorage */; };
-		D35B4CB628AEBF8D00FFE40F /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B4CB528AEBF8D00FFE40F /* AuthenticationViewModel.swift */; };
 		D35B4CB928AEE21800FFE40F /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B4CB828AEE21800FFE40F /* AuthenticationModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,10 +57,13 @@
 		D343A55928AD35E800CDC5E3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D356176328B0716E003D2725 /* TvShows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShows.swift; sourceTree = "<group>"; };
 		D356176528B072AA003D2725 /* TvShowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowVM.swift; sourceTree = "<group>"; };
+		D3573E8028B4582700B264E5 /* TopMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovie.swift; sourceTree = "<group>"; };
+		D3573E8228B458EC00B264E5 /* TopMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieModel.swift; sourceTree = "<group>"; };
+		D3573E8428B4614B00B264E5 /* AiringModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiringModel.swift; sourceTree = "<group>"; };
+		D3573E8628B462D600B264E5 /* AiringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiringViewModel.swift; sourceTree = "<group>"; };
 		D35944A928B01B9600845743 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D35B4CA528AEBC0200FFE40F /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		D35B4CA728AEBD0E00FFE40F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D35B4CB528AEBF8D00FFE40F /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		D35B4CB828AEE21800FFE40F /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +117,8 @@
 			children = (
 				D343A55928AD35E800CDC5E3 /* Movie.swift */,
 				D356176328B0716E003D2725 /* TvShows.swift */,
+				D3573E8028B4582700B264E5 /* TopMovie.swift */,
+				D3573E8428B4614B00B264E5 /* AiringModel.swift */,
 			);
 			path = MenuModel;
 			sourceTree = "<group>";
@@ -128,6 +136,8 @@
 			children = (
 				D310C45F28ADBB12008E0220 /* MenuViewModel.swift */,
 				D356176528B072AA003D2725 /* TvShowVM.swift */,
+				D3573E8228B458EC00B264E5 /* TopMovieModel.swift */,
+				D3573E8628B462D600B264E5 /* AiringViewModel.swift */,
 			);
 			path = MenuModelView;
 			sourceTree = "<group>";
@@ -212,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				D35B4CB728AEE1FC00FFE40F /* AuthenticationModel */,
-				D35B4CB428AEBF6C00FFE40F /* AuthenticationViewModel */,
 				D35B4CA428AEBBE900FFE40F /* view */,
 			);
 			path = Authentication;
@@ -224,14 +233,6 @@
 				D35B4CA528AEBC0200FFE40F /* AuthenticationViewController.swift */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		D35B4CB428AEBF6C00FFE40F /* AuthenticationViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D35B4CB528AEBF8D00FFE40F /* AuthenticationViewModel.swift */,
-			);
-			path = AuthenticationViewModel;
 			sourceTree = "<group>";
 		};
 		D35B4CB728AEE1FC00FFE40F /* AuthenticationModel */ = {
@@ -330,17 +331,20 @@
 				D343A55728AD2D3B00CDC5E3 /* TableViewCell.swift in Sources */,
 				D356176428B0716E003D2725 /* TvShows.swift in Sources */,
 				D356176628B072AA003D2725 /* TvShowVM.swift in Sources */,
+				D3573E8728B462D600B264E5 /* AiringViewModel.swift in Sources */,
 				D343A54228AD2C6F00CDC5E3 /* AppDelegate.swift in Sources */,
+				D3573E8328B458EC00B264E5 /* TopMovieModel.swift in Sources */,
 				D3414F2C28AFCBFC0042489B /* DetailViewController.swift in Sources */,
 				D310C45E28ADB787008E0220 /* MenuViewController.swift in Sources */,
 				D35B4CA628AEBC0200FFE40F /* AuthenticationViewController.swift in Sources */,
 				D343A54428AD2C6F00CDC5E3 /* SceneDelegate.swift in Sources */,
-				D35B4CB628AEBF8D00FFE40F /* AuthenticationViewModel.swift in Sources */,
 				D35B4CB928AEE21800FFE40F /* AuthenticationModel.swift in Sources */,
 				D343A55A28AD35E800CDC5E3 /* Movie.swift in Sources */,
+				D3573E8128B4582700B264E5 /* TopMovie.swift in Sources */,
 				D35944AA28B01B9600845743 /* ProfileViewController.swift in Sources */,
 				D310C45A28ADB283008E0220 /* MenuViewCell.swift in Sources */,
 				D310C46028ADBB12008E0220 /* MenuViewModel.swift in Sources */,
+				D3573E8528B4614B00B264E5 /* AiringModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

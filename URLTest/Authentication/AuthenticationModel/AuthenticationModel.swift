@@ -6,7 +6,8 @@
 //
 
 import Foundation
-enum ProviderType: String{
-    case basic
+
+struct User {
+    let email: String
 }
 

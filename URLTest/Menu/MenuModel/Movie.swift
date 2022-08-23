@@ -1,26 +1,9 @@
-//
-//  Movie.swift
-//  URLTest
-//
-//  Created by Adrian San Martin on 18/08/22.
-//
-
 import Foundation
-
-// MARK: - Movie
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
-
-
-// MARK: - Welcome
 struct Movie: Codable {
     let dates: Dates
     let page: Int
     let results: [Result]
     let totalPages, totalResults: Int
-
     enum CodingKeys: String, CodingKey {
         case dates, page, results
         case totalPages = "total_pages"
@@ -28,12 +11,10 @@ struct Movie: Codable {
     }
 }
 
-// MARK: - Dates
 struct Dates: Codable {
     let maximum, minimum: String
 }
 
-// MARK: - Result
 struct Result: Codable {
     let adult: Bool
     let backdropPath: String
